@@ -1,0 +1,188 @@
+/* -- 5. Header -- */
+#main_header {
+    height: 48px;
+    background: #20638f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1020;
+    -webkit-transition: 200ms ease;
+    transition: 200ms ease;
+}
+#main_header .brand_section {
+    line-height: 46px;
+    color: #ffffff;
+    float: left;
+    text-align: center;
+}
+#main_header .header_notifications {
+    list-style: none;
+    margin: 8px 40px 0 20px;
+    padding: 0;
+    float: left;
+}
+#main_header .header_notifications > li {
+    float: left;
+    position: relative;
+    padding: 2px 0 0;
+}
+#main_header .header_notifications > li > a {
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    padding: 3px 12px 2px;
+    background: rgba(255, 255, 255, 0.08);
+    -webkit-transition: all 400ms ease;
+    transition: all 400ms ease;
+    display: block;
+}
+#main_header .header_notifications > li > a:hover,
+#main_header .header_notifications > li > a:focus {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.18);
+}
+#main_header .header_notifications > li > .label {
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    border-radius: 2px;
+}
+#main_header .header_notifications > li + li {
+    margin-left: 14px;
+}
+#main_header .header_notifications .dropdown.open .dropdown-menu {
+    -webkit-animation-duration: 400ms;
+    animation-duration: 400ms;
+    -webkit-animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+#main_header .header_notifications .dropdown-menu {
+    padding: 10px;
+    margin-top: 8px;
+    width: 260px;
+    z-index: 110;
+}
+#main_header .header_notifications .dropdown-menu:before,
+#main_header .header_notifications .dropdown-menu:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    border: 5px solid transparent;
+}
+#main_header .header_notifications .dropdown-menu:before {
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+    top: -11px;
+    left: 15px;
+}
+#main_header .header_notifications .dropdown-menu:after {
+    border-bottom-color: #ffffff;
+    top: -10px;
+    left: 15px;
+}
+#main_header .header_notifications .dropdown-menu ul {
+    margin: 0;
+    padding: 0;
+}
+#main_header .header_notifications .dropdown-menu ul li {
+    list-style: none;
+    overflow: hidden;
+    padding: 6px 0;
+}
+#main_header .header_notifications .dropdown-menu ul li > img {
+    float: left;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+#main_header .header_notifications .dropdown-menu ul li small,
+#main_header .header_notifications .dropdown-menu ul li p {
+    overflow: hidden;
+}
+#main_header .header_notifications .dropdown-menu ul li small {
+    font-size: 11px;
+}
+#main_header .header_notifications .dropdown-menu ul li p {
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0;
+    padding-top: 2px;
+}
+#main_header .header_notifications .dropdown-menu ul li + li {
+    border-top: 1px solid #eee;
+}
+#main_header .header_notifications .dropdown-menu ul li .label {
+    margin-top: 3px;
+}
+#main_header .header_notifications .dropdown-menu ul li .btn {
+    margin-top: 4px;
+}
+#main_header .search_section {
+    float: right;
+    width: 200px;
+    margin-right: 20px;
+    margin-top: 10px;
+    position: relative;
+}
+#main_header .search_section > input {
+    border: none;
+    height: 26px;
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-transition: background 400ms ease;
+    transition: background 400ms ease;
+}
+#main_header .search_section > input:focus {
+    background: #fff;
+}
+#main_header .search_section .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #222222;
+    padding: 4px 8px 2px;
+}
+#main_header .header_user_actions {
+    float: right;
+}
+#main_header .header_user_actions .user_dropdown {
+    cursor: pointer;
+    overflow: hidden;
+    padding: 4px 5px;
+    -webkit-transition: background 400ms ease;
+    transition: background 400ms ease;
+}
+#main_header .header_user_actions .user_dropdown:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+#main_header .header_user_actions .user_dropdown .caret {
+    color: #fff;
+    margin-top: 18px;
+}
+#main_header .header_user_actions .user_avatar {
+    float: left;
+    margin-right: 5px;
+}
+#main_header .header_user_actions .user_avatar img {
+    border: 1px solid #eee;
+}
+#main_header .header_user_actions .user_body {
+    float: left;
+    color: #ffffff;
+}
+#main_header .header_user_actions .user_subinfo {
+    display: block;
+}
+#main_header .header_user_actions .dropdown-menu {
+    margin-top: 1px;
+}
+#main_header #main_search {
+    width: 200px;
+    margin: 4px 0 0 40px;
+    float: left;
+}
+/* -- 6. Breadcrumbs -- */

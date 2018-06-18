@@ -1,0 +1,444 @@
+/* -- 4. Main Menu -- */
+#main_menu,
+#main_menu .submenu-title,
+.menu_toggle {
+    display: none;
+}
+.side_menu_active #main_wrapper,
+.side_menu_active #breadcrumbs {
+    margin-left: 240px;
+}
+.side_menu_active #main_menu {
+    width: 240px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 48px;
+    background: #f5f5f5;
+    padding: 0 0 50px;
+    display: block;
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: #e2e2e2;
+    z-index: 101;
+}
+.side_menu_active #main_menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.side_menu_active #main_menu ul li a:focus,
+.side_menu_active #main_menu ul li a:hover {
+    text-decoration: none;
+}
+.side_menu_active #main_menu .menu_wrapper {
+    padding-bottom: 35px;
+    height: 100%;
+    position: relative;
+}
+.side_menu_active #main_menu .first_level > a {
+    line-height: 26px;
+    display: block;
+    padding: 6px 10px;
+    color: #222222;
+}
+.side_menu_active #main_menu .first_level > a .first_level_icon {
+    margin-right: 6px;
+    font-size: 16px;
+    vertical-align: -1px;
+    min-width: 20px;
+    text-align: center;
+    display: inline-block;
+}
+.side_menu_active #main_menu .first_level > a .label {
+    position: absolute;
+    right: 34px;
+    top: 12px;
+    min-width: 20px;
+    text-align: center;
+}
+.side_menu_active #main_menu .first_level > a:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+.side_menu_active #main_menu .first_level ul {
+    display: none;
+}
+.side_menu_active #main_menu .has_submenu > a {
+    padding-right: 20px;
+}
+.submenu-link {
+    display: block;
+    padding: 6px 20px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #222222;
+}
+.submenu-link:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+.side_menu_active .menu_toggle {
+    position: absolute;
+    left: 0;
+    bottom: 48px;
+    width: 100%;
+    color: #fff;
+    -webkit-transition: all 400ms ease;
+    transition: all 400ms ease;
+    cursor: pointer;
+    padding: 5px 5px 6px;
+    z-index: 102;
+    text-align: center;
+    display: block;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    background: rgba(0, 0, 0, 0.02);
+}
+.side_menu_active .menu_toggle .icon_menu_toggle {
+    font-size: 18px;
+    color: #999;
+    vertical-align: middle;
+}
+.side_menu_active .menu_toggle:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+.side_menu_active.side_menu_expanded #main_menu .first_level > a {
+    position: relative;
+}
+.side_menu_active.side_menu_expanded #main_menu .first_level.has_submenu > a:after {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 4px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    right: 12px;
+    top: 18px;
+}
+.side_menu_active.side_menu_expanded #main_menu .first_level.has_submenu > ul a.act_nav {
+    background: rgba(0, 0, 0, 0.06);
+    position: relative;
+    color: #222222;
+}
+.side_menu_active.side_menu_expanded #main_menu .first_level.has_submenu > ul a.act_nav:after {
+    position: absolute;
+    top: 50%;
+    content: '';
+    display: block;
+    right: 0;
+    border: 9px solid transparent;
+    width: 0;
+    height: 0;
+    border-right-color: #fff;
+    margin-top: -9px;
+}
+.side_menu_active.side_menu_expanded #main_menu .first_level .has_submenu ul {
+    margin-left: 20px;
+}
+.side_menu_active.side_menu_expanded #main_menu .first_level.section_active {
+    border-bottom: 1px solid #ddd;
+}
+.side_menu_active.side_menu_expanded #main_menu .first_level.section_active > a {
+    background: #444;
+    color: #fff;
+    margin: 0 -1px;
+}
+.side_menu_active.side_menu_expanded #main_menu .first_level.section_active > a:after {
+    border-bottom-color: rgba(255, 255, 255, 0.9);
+    border-top-color: transparent;
+    top: 13px;
+}
+.side_menu_active.side_menu_expanded #main_menu .first_level.section_active > a:hover {
+    background: #444;
+}
+.side_menu_active.side_menu_expanded #main_menu .has_submenu .has_submenu {
+    position: relative;
+}
+.side_menu_active.side_menu_expanded #main_menu .has_submenu .has_submenu > a:after {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 4px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}
+.side_menu_active.side_menu_expanded #main_menu .has_submenu .has_submenu.submenu_active > a:after {
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+    border-top-color: transparent;
+    top: 9px;
+}
+.side_menu_active.side_menu_expanded #main_menu .submenu_active {
+    background: rgba(0, 0, 0, 0.05);
+}
+.side_menu_active.side_menu_collapsed #main_wrapper,
+.side_menu_active.side_menu_collapsed #breadcrumbs {
+    margin-left: 42px;
+}
+.side_menu_active.side_menu_collapsed #main_menu {
+    width: 42px;
+}
+.side_menu_active.side_menu_collapsed #main_menu .first_level > a {
+    padding: 6px 10px;
+}
+.side_menu_active.side_menu_collapsed #main_menu .first_level > a .first_level_icon {
+    margin: 0;
+}
+.side_menu_active.side_menu_collapsed #main_menu .first_level > a .menu-title {
+    display: none;
+}
+.side_menu_active.side_menu_collapsed #main_menu .first_level > a .label {
+    min-width: 4px;
+    padding: 1px 2px;
+    right: auto;
+    top: 2px;
+    left: 3px;
+}
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu {
+    position: relative;
+}
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu > a {
+    position: relative;
+    z-index: 10;
+}
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu > ul {
+    position: absolute;
+    z-index: 5;
+    left: 100%;
+    top: 0;
+    width: 200px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #e2e2e2;
+    background: #f5f5f5;
+    display: none !important;
+}
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu > ul li:first-child {
+    border-top: 1px solid #e2e2e2;
+}
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu > ul li.submenu-title {
+    display: list-item;
+    height: 38px;
+    line-height: 38px;
+    color: #fff;
+    background: #444;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 0  14px;
+    margin: 0 -1px;
+}
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu > ul li.submenu-title,
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu > ul li.submenu-title + li {
+    border-top: none;
+}
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu > ul a {
+    padding: 6px 16px;
+}
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu > ul a .act_nav:before,
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu > ul a .act_nav:after {
+    display: none;
+}
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu > ul .has_submenu > ul {
+    top: -1px;
+}
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu > ul .has_submenu > a:after {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 4px solid transparent;
+    border-left-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    right: 6px;
+    top: 12px;
+}
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu > ul .has_submenu:hover > a:after {
+    border-left-color: rgba(255, 255, 255, 0.9);
+}
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu:hover > a {
+    background: #444;
+    color: #fff;
+}
+.side_menu_active.side_menu_collapsed #main_menu .has_submenu:hover > ul {
+    display: block !important;
+}
+@media only screen and (max-width: 991px) {
+    .side_menu_active #main_wrapper,
+    .side_menu_active #breadcrumbs {
+        margin-left: 42px;
+    }
+    .side_menu_active #main_menu .section_active a.act_nav:before,
+    .side_menu_active #main_menu .section_active a.act_nav:after {
+        display: none !important;
+    }
+    .side_menu_active.side_menu_expanded #main_menu {
+        box-shadow: 4px 0 8px rgba(0, 0, 0, 0.25);
+        border-right-color: transparent;
+    }
+}
+.top_menu_active {
+    padding-top: 80px;
+}
+.top_menu_active #main_menu {
+    position: fixed;
+    top: 48px;
+    height: 32px;
+    left: 0;
+    right: 0;
+    display: block;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    zoom: 1;
+    z-index: 100;
+}
+.top_menu_active #main_menu:before,
+.top_menu_active #main_menu:after {
+    content: "";
+    display: table;
+}
+.top_menu_active #main_menu:after {
+    clear: both;
+}
+.top_menu_active #main_menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.top_menu_active #main_menu ul li a:focus,
+.top_menu_active #main_menu ul li a:hover {
+    text-decoration: none;
+}
+.top_menu_active #main_menu .first_level {
+    float: left;
+    position: relative;
+}
+.top_menu_active #main_menu .first_level > a {
+    line-height: 20px;
+    display: block;
+    padding: 6px 10px;
+    color: #222222;
+}
+.top_menu_active #main_menu .first_level > a .first_level_icon {
+    margin-right: 6px;
+    font-size: 16px;
+    vertical-align: -1px;
+    min-width: 20px;
+    text-align: center;
+    display: inline-block;
+}
+@media only screen and (max-width: 767px) {
+    .top_menu_active #main_menu .first_level > a .first_level_icon {
+        margin-right: 0;
+    }
+}
+.top_menu_active #main_menu .first_level > a .label {
+    display: none;
+}
+.top_menu_active #main_menu .first_level > a:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+@media only screen and (max-width: 767px) {
+    .top_menu_active #main_menu .first_level > a .menu-title {
+        display: none;
+    }
+}
+.top_menu_active #main_menu .first_level ul {
+    display: none;
+}
+.top_menu_active #main_menu .first_level.has_submenu > a {
+    padding-right: 20px;
+}
+.top_menu_active #main_menu .first_level.has_submenu > a:after {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 4px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    right: 6px;
+    top: 14px;
+}
+@media only screen and (max-width: 767px) {
+    .top_menu_active #main_menu .first_level.has_submenu > a:after {
+        right: 6px;
+    }
+}
+.top_menu_active #main_menu .first_level.has_submenu > ul {
+    top: 32px;
+    border-width: 0 1px 1px;
+}
+.top_menu_active #main_menu .first_level.has_submenu:hover > a:after {
+    border-top-color: rgba(255, 255, 255, 0.9);
+}
+.top_menu_active #main_menu .has_submenu {
+    position: relative;
+}
+.top_menu_active #main_menu .has_submenu:hover > a {
+    background: #444 !important;
+    color: #fff;
+}
+.top_menu_active #main_menu .has_submenu:hover > a:after {
+    color: rgba(255, 255, 255, 0.8);
+}
+.top_menu_active #main_menu .has_submenu:hover > ul {
+    display: block !important;
+}
+.top_menu_active #main_menu .has_submenu > ul {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    width: 200px;
+    border-style: solid;
+    border-color: #e2e2e2;
+    background: #f5f5f5;
+    display: none !important;
+}
+.top_menu_active #main_menu .has_submenu > ul a {
+    display: block;
+    padding: 6px 10px;
+    font-size: 13px;
+    color: #222222;
+}
+.top_menu_active #main_menu .has_submenu > ul a:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+.top_menu_active #main_menu .has_submenu .has_submenu > a:after {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 4px solid transparent;
+    border-left-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    right: 6px;
+    top: 12px;
+}
+.top_menu_active #main_menu .has_submenu .has_submenu:hover > a:after {
+    border-left-color: rgba(255, 255, 255, 0.9);
+}
+.top_menu_active #main_menu .has_submenu .has_submenu:hover > ul {
+    border-width: 1px;
+    left: 100%;
+    top: -1px;
+}
+@media only screen and (min-width: 1120px) {
+    .top_menu_active.fixed_layout #main_menu {
+        width: 1100px;
+        left: 50%;
+        right: auto;
+        margin-left: -550px;
+        border-width: 0 1px 1px;
+        border-style: solid;
+        border-color: #e2e2e2;
+    }
+}
+.top_menu_active .row_full {
+    margin-right: -25px;
+}
+/* scrollbar */
+.side_menu_active #main_menu .mCustomScrollbar {
+    width: 240px;
+}
+.side_menu_active #main_menu .mCustomScrollbar .mCSB_scrollTools_vertical {
+    left: auto;
+    right: 0;
+    margin: 0 0 35px;
+    width: 10px;
+}
