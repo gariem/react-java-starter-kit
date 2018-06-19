@@ -53,7 +53,7 @@ public class DefaultOperationService implements OperationService {
     }
 
     /***
-     * Attemps to retrieve a bank account object using the bank account id as parameter.
+     * Attempts to retrieve a bank account object using the bank account id as parameter.
      * @param id Bank account ID
      * @return BankAccount
      */

@@ -25,4 +25,5 @@ yarn-error.log*
 
 # gradle
 .gradle
+/out
 
