@@ -15,7 +15,9 @@ class TaskList extends React.Component {
 
     render() {
         let renderFunction =
-            this.props.taskList && this.props.taskList.length ? this.renderList : this.renderEmpty;
+            this.props.taskList &&
+            this.props.taskList.length ?
+                this.renderList : this.renderEmpty;
 
         return (
             renderFunction()

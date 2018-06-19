@@ -1,26 +1,12 @@
 package com.myorg.service;
 
 import com.myorg.model.Task;
-import com.myorg.repository.TaskRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
-public class TaskService {
+public interface TaskService {
 
-    @Autowired
-    TaskRepository repository;
+    Task createTask(Task task);
 
-    public Task createTask(Task task) {
-        return repository.save(task);
-    }
+    Task createTaskWithRules(Task task);
 
-    public Task completeTask(Task task) {
-        task.setCompleted(true);
-        return repository.save(task);
-    }
-
-    public void removeTask(Task task) {
-        repository.delete(task);
-    }
+    Task closeRandomTask();
 }
