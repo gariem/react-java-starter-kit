@@ -12,6 +12,6 @@ public class BankAccount {
 
     @Id
     private int accountId;
-    private String owner;
+    private String accountName;
     private BigDecimal balance;
 }

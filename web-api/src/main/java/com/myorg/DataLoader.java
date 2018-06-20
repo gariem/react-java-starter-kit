@@ -33,13 +33,13 @@ public class DataLoader implements CommandLineRunner {
 
         BankAccount bankAccount1 = new BankAccount();
         bankAccount1.setAccountId(1001);
-        bankAccount1.setBalance(new BigDecimal(3000));
-        bankAccount1.setOwner("Juan Perez");
+        bankAccount1.setBalance(new BigDecimal(8000));
+        bankAccount1.setAccountName("Payday");
 
         BankAccount bankAccount2 = new BankAccount();
         bankAccount2.setAccountId(2001);
-        bankAccount2.setBalance(new BigDecimal(1000));
-        bankAccount2.setOwner("Salim Vera");
+        bankAccount2.setBalance(new BigDecimal(2000));
+        bankAccount2.setAccountName("Savings");
 
         bankAccountRepository.save(bankAccount1);
         bankAccountRepository.save(bankAccount2);

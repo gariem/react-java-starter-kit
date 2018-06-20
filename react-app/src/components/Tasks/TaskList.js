@@ -27,7 +27,7 @@ class TaskList extends React.Component {
     renderList() {
         return (
             <div>
-                <h3>Current tasks: </h3>
+                <h4>Current tasks: </h4>
                 <ul>
                     {this.props.taskList.map((item, index) => (
                         <li key={index}>{item.description}</li>

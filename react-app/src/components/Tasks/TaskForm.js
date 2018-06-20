@@ -1,16 +1,24 @@
 import React from 'react';
-import {Form, FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap';
+import {Button, Form, FormControl, FormGroup} from 'react-bootstrap';
 
 class TaskForm extends React.Component {
 
-    render(){
-        return(
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit() {
+        console.log("ola ke ase");
+    }
+
+    render() {
+        return (
             <div>
-                <h3>Add task: </h3>
+                <h4>Add task: </h4>
                 <Form inline>
                     <FormGroup controlId="taskDescription">
-                        <ControlLabel>Description</ControlLabel>{' '}
-                        <FormControl placeholder="Enter description..." />
+                        <FormControl placeholder="Enter description..."/>
                     </FormGroup>{' '}
                     <Button type="submit">Add</Button>
                 </Form>
@@ -18,4 +26,5 @@ class TaskForm extends React.Component {
         )
     }
 }
+
 export default TaskForm;

@@ -6,23 +6,15 @@ import {connect} from "react-redux";
 
 class Transfer extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         this.props.fetchAccountList();
-    }
-
-    componentWillReceiveProps(nextProps) {
-        
     }
 
     render() {
         return (
             <div>
                 <BalanceList accounts={this.props.accountList}/>
-                <TransferForm/>
+                <TransferForm afterSubmit={this.props.fetchAccountList}/>
             </div>
         )
     }
