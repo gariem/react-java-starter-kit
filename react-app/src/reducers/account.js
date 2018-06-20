@@ -1,11 +1,11 @@
-import {VIEW_TASK_LIST} from "../actions/actionTypes";
+import {VIEW_BALANCE_LIST} from '../actions/actionTypes';
 
-export default function task(state = {}, action) {
+export default function account(state = {}, action) {
     switch (action.type) {
-        case VIEW_TASK_LIST:
+        case VIEW_BALANCE_LIST:
             return Object.assign({}, state, {
                 actionType: action.type,
-                todoList: action.taskList,
+                todoList: action.accountList,
                 error: false
             });
 

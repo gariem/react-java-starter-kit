@@ -19,7 +19,7 @@ const menuItems = [
         submenu_title: 'Maintenance',
         submenu: [
             {title: 'Tasks', link: '/tasks'},
-            {title: 'Submenu 2', link: '#'},
+            {title: 'Transfers', link: '/transfer'},
             {title: 'Submenu 3', link: '#'},
         ]
     },

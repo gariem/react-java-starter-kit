@@ -21,19 +21,24 @@ repositories {
 def lombok = "1.12.6"
 
 dependencies {
+    // Enable groovy and spring
     compile 'org.codehaus.groovy:groovy-all:2.4.7'
 
     compile "org.springframework.boot:spring-boot-starter"
     compile "org.springframework.boot:spring-boot-starter-web"
 
+    // Persistence
     compile "org.springframework.boot:spring-boot-starter-data-jpa"
     compile "org.springframework.boot:spring-boot-starter-data-rest"
     compile "com.h2database:h2"
 
+    // Eases setters and getters (annotation processing should be enabled at IDE level)
     compile "org.projectlombok:lombok:$lombok"
 
+    // Enhance the application development experience by enabling features such as live reload
     runtime "org.springframework.boot:spring-boot-devtools"
 
+    // Spring and spock testing libraries
     testCompile "org.springframework.boot:spring-boot-starter-test"
     testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
     testCompile "org.spockframework:spock-spring:1.1-groovy-2.4"

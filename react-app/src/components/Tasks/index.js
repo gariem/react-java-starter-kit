@@ -29,8 +29,8 @@ class Tasks extends React.Component {
 
 const mapState = state => {
     return {
-        taskList: state.data.todoList || [],
-        actionType: state.data.actionType
+        taskList: state.task.todoList || [],
+        actionType: state.task.actionType
     }
 };
 

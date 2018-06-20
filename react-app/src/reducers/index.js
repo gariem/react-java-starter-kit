@@ -1,7 +1,8 @@
 import {combineReducers} from 'redux';
-import data from './task';
+import task from './task';
+import account from './account';
 
 
 export default combineReducers({
-    data
+    account, task
 });

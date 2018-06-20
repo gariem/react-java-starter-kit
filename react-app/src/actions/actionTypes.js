@@ -1,1 +1,4 @@
 export const VIEW_TASK_LIST = 'VIEW_TASK_LIST';
+
+export const VIEW_BALANCE_LIST = 'VIEW_BALANCE_LIST';
+export const TRANSFER_MONEY = 'TRANSFER_MONEY';
