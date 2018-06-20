@@ -19,6 +19,7 @@ function setAccountList(bankAccounts) {
 }
 
 export function executeTransfer(request) {
+    console.log("request: ", request);
     return function (dispatch, getState) {
         fetch('http://localhost:8080/api/operations/transferRequests', {
             method: 'post',
@@ -30,7 +31,7 @@ export function executeTransfer(request) {
         })
             .then(response => response.json())
             .then(jsonData => {
-                dispatch(setAccountList(jsonData))
+                dispatch(setExecuteTransfer(jsonData))
             });
     };
 }

@@ -8,6 +8,19 @@ class BalanceList extends React.Component {
         accounts: PropTypes.array.isRequired
     };
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            accounts: []
+        };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.accounts) {
+            this.setState({accounts: nextProps.accounts})
+        }
+    }
+
     render() {
         return (
             <div>
@@ -21,7 +34,7 @@ class BalanceList extends React.Component {
                     </tr>
                     </thead>
                     <tbody>
-                    {this.props.accounts.map((account, index) => (
+                    {this.state.accounts.map((account, index) => (
                         <tr key={index}>
                             <td>{account.accountId}</td>
                             <td>{account.accountName}</td>
