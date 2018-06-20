@@ -28,7 +28,7 @@ public class DefaultOperationService implements OperationService {
     /***
      * Executes a transfer requests including verifications for both origin and destination accounts.
      * @param request Wrapper object containing info about the transfer request such as origin, destination, and ammount.
-     * @return
+     * @return the same request object with result
      */
     @Override
     @Transactional

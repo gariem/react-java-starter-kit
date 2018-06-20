@@ -18,11 +18,11 @@ class DefaultOperationServiceTest extends Specification {
     def setup() {
         account1.accountId = 1001
         account1.balance = new BigDecimal(3000)
-        account1.owner = "Juan Perez"
+        account1.accountName = "Payday"
 
         account2.accountId = 2001
         account2.balance = new BigDecimal(1000)
-        account2.owner = "Emilio Garcia"
+        account2.accountName = "Savings"
 
         bankAccountRepository = Mock(BankAccountRepository.class)
         defaultOperationService = new DefaultOperationService(bankAccountRepository)
