@@ -21,8 +21,8 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
     @ExceptionHandler(value = {ApiException.class})
     protected ResponseEntity<Object> handleBusinessException(ApplicationException ex, WebRequest request) {
         Map<String, String> responseBody = new HashMap<>();
-        responseBody.put("category: ", BUSINESS_EXCEPTION);
-        responseBody.put("message: ", ex.getMessage());
+        responseBody.put("category", BUSINESS_EXCEPTION);
+        responseBody.put("message", ex.getMessage());
         return handleExceptionInternal(ex, responseBody, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
     }
 

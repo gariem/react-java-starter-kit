@@ -2,7 +2,6 @@ import {EXECUTE_TRANSFER, VIEW_BALANCE_LIST} from './actionTypes';
 
 export function fetchAccountList() {
     return function (dispatch, getState) {
-
         fetch("http://localhost:8080/api/bankAccounts")
             .then(response => response.json())
             .then(jsonData => {
@@ -19,7 +18,6 @@ function setAccountList(bankAccounts) {
 }
 
 export function executeTransfer(request) {
-    console.log("request: ", request);
     return function (dispatch, getState) {
         fetch('http://localhost:8080/api/operations/transferRequests', {
             method: 'post',
@@ -29,10 +27,12 @@ export function executeTransfer(request) {
             },
             body: JSON.stringify(request)
         })
-            .then(response => response.json())
+            .then(async response => {
+                return Object.assign({}, {error: !response.ok}, await response.json());
+            })
             .then(jsonData => {
                 dispatch(setExecuteTransfer(jsonData))
-            });
+            })
     };
 }
 
