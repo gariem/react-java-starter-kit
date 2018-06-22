@@ -1,13 +1,6 @@
 import React from 'react';
 import Login from '../../components/Login';
 
-class LoginPage extends React.Component {
+const LoginPage = () => (<Login/>);
 
-    render() {
-        return(
-            <Login/>
-        )
-    }
-
-}
 export default LoginPage;

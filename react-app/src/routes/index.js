@@ -6,19 +6,15 @@ import './main.css';
 import TasksPage from "./TasksPage";
 import TransferPage from "./TransferPage";
 
-class Routes extends React.Component {
-    render() {
-        return (
-            <Router>
-                <div className="main_container">
-                    <Route exact path="/" component={HomePage}/>
-                    <Route path="/login" component={LoginPage}/>
-                    <Route path="/tasks" component={TasksPage}/>
-                    <Route path="/transfer" component={TransferPage}/>
-                </div>
-            </Router>
-        )
-    }
-}
+const Routes = () => (
+    <Router>
+        <div className="main_container">
+            <Route exact path="/" component={HomePage}/>
+            <Route path="/login" component={LoginPage}/>
+            <Route path="/tasks" component={TasksPage}/>
+            <Route path="/transfer" component={TransferPage}/>
+        </div>
+    </Router>
+);
 
 export default Routes;
