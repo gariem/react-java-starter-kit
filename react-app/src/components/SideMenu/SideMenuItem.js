@@ -23,6 +23,7 @@ class SideMenuItem extends React.Component {
         this.setState({active: !this.state.active});
     }
 
+    
     render() {
         let item = this.props.item;
         let subMenuClass = this.state.subItems ? 'has_submenu' : '';
@@ -30,9 +31,11 @@ class SideMenuItem extends React.Component {
         let subMenuVisible = this.state.active ? {display: 'block'} : {};
         return (
             <li key={item.id} className={`first_level ${subMenuClass} ${activeClass}`}>
-                <a onClick={this.handleClick} href={item.link}>
-                    <span className={item.icon}></span>
-                    <span className="menu-title">{item.title}</span>
+                <div onClick={this.handleClick} href={item.link}>
+                    <div className={`side_menu_active principal ${activeClass}`}>
+                      <span className={item.icon}></span>
+                      <span className="menu-title">{item.title}</span>
+                    </div>
                     {!item.submenu ? '' :
                         <ul style={subMenuVisible}>
                             <li className="submenu-title">{item.submenu_title}</li>
@@ -42,7 +45,7 @@ class SideMenuItem extends React.Component {
                             )}
                         </ul>
                     }
-                </a>
+                </div>
             </li>
         )
     }

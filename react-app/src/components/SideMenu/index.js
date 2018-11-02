@@ -13,6 +13,10 @@ class SideMenu extends React.Component {
         this.props.onToggle();
     }
 
+    componentWillReceiveProps(nextProps){
+      console.log("next: ",nextProps);
+    }
+
     render() {
         return (
             <nav id="main_menu">

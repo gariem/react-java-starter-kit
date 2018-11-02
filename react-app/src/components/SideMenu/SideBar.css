@@ -10,6 +10,12 @@
     margin-left: 240px;
 }
 
+.side_menu_active .principal{
+  height: 35px;
+  padding: 10px;
+}
+
+
 .side_menu_active #main_menu {
     width: 240px;
     height: 100%;
@@ -153,10 +159,6 @@
 
 .side_menu_active.side_menu_expanded #main_menu .first_level .has_submenu ul {
     margin-left: 20px;
-}
-
-.side_menu_active.side_menu_expanded #main_menu .first_level.section_active {
-    border-bottom: 1px solid #ddd;
 }
 
 .side_menu_active.side_menu_expanded #main_menu .first_level.section_active > a {
