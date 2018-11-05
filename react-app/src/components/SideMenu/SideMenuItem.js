@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 
 class SideMenuItem extends React.Component {
 
@@ -23,7 +24,7 @@ class SideMenuItem extends React.Component {
         this.setState({active: !this.state.active});
     }
 
-    
+
     render() {
         let item = this.props.item;
         let subMenuClass = this.state.subItems ? 'has_submenu' : '';
@@ -40,7 +41,9 @@ class SideMenuItem extends React.Component {
                         <ul style={subMenuVisible}>
                             <li className="submenu-title">{item.submenu_title}</li>
                             {item.submenu.map((subItem, i) => (
-                                    <li key={i}><a className="submenu-link" href={subItem.link}>{subItem.title}</a></li>
+                                    <li key={i}>
+                                      <Link className="submenu-link" to={subItem.link}>{subItem.title}</Link>
+                                    </li>
                                 )
                             )}
                         </ul>
