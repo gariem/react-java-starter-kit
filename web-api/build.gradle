@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.0.1.RELEASE'
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
 }
 
 group 'com.myorg'
@@ -18,7 +18,7 @@ repositories {
     mavenCentral()
 }
 
-def lombok = "1.12.6"
+def lombok = "1.18.8"
 
 dependencies {
     // Enable groovy and spring
@@ -34,6 +34,8 @@ dependencies {
 
     // Eases setters and getters (annotation processing should be enabled at IDE level)
     compile "org.projectlombok:lombok:$lombok"
+
+    annotationProcessor "org.projectlombok:lombok:$lombok"
 
     // Enhance the application development experience by enabling features such as live reload
     runtime "org.springframework.boot:spring-boot-devtools"
